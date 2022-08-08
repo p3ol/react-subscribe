@@ -6,6 +6,7 @@ import {
   forwardRef,
 } from 'react';
 import PropTypes from 'prop-types';
+import { classNames } from '@poool/junipero-utils';
 
 import { useSubscribe } from '../hooks';
 import { generateId } from '../utils';
@@ -13,6 +14,7 @@ import { generateId } from '../utils';
 const Element = forwardRef(({
   styles,
   type,
+  className,
   tag: Tag = 'div',
   useGlobalFactory = true,
   ...rest
@@ -55,12 +57,17 @@ const Element = forwardRef(({
   };
 
   return (
-    <Tag ref={containerRef} id={id} />
+    <Tag
+      ref={containerRef}
+      className={classNames('p3-element', className)}
+      id={id}
+    />
   );
 });
 
 Element.displayName = 'Element';
 Element.propTypes = {
+  className: PropTypes.string,
   styles: PropTypes.object,
   type: PropTypes.string.isRequired,
   tag: PropTypes.oneOfType([
