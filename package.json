@@ -1,6 +1,6 @@
 {
   "name": "@poool/react-subscribe",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "Subscribe elements for React",
   "main": "dist/poool-react-subscribe.cjs.js",
   "repository": "https://github.com/p3ol/react-subscribe.git",
@@ -72,6 +72,7 @@
   "dependencies": {
     "@babel/runtime-corejs3": "7.18.3",
     "core-js": "3.23.3",
+    "@poool/junipero-utils": "2.0.0-rc.21",
     "prop-types": "15.8.1"
   }
 }

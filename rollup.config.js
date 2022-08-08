@@ -14,7 +14,7 @@ const formats = ['umd', 'cjs', 'esm'];
 const defaultExternals = ['react', 'prop-types'];
 const defaultGlobals = {
   react: 'React',
-  propTypes: 'PropTypes',
+  'prop-types': 'PropTypes',
 };
 
 const defaultPlugins = [
