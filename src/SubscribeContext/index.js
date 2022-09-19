@@ -31,7 +31,12 @@ const SubscribeContext = ({
       await loadScript(scriptUrl, 'poool-react-subscribe-lib');
     }
 
-    const lib = globalThis.Subscribe.noConflict();
+    const subscribeRef = globalThis.PooolSubscribe || globalThis.Subscribe;
+    const lib = subscribeRef?.noConflict?.();
+
+    if (!lib) {
+      return;
+    }
 
     const factory = lib
       .init(appId)
