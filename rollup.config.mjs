@@ -44,12 +44,12 @@ export default formats.map(f => ({
     name: 'PooolReactSubscribe',
     sourcemap: true,
     globals: defaultGlobals,
+    ...(f === 'esm' ? {
+      manualChunks: id => {
+        return id.includes('node_modules')
+          ? 'vendor'
+          : path.parse(id).name;
+      },
+    } : {}),
   },
-  ...(f === 'esm' ? {
-    manualChunks: id => {
-      return id.includes('node_modules')
-        ? 'vendor'
-        : path.parse(id).name;
-    },
-  } : {}),
 }));
