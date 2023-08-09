@@ -41,10 +41,12 @@ const Element = forwardRef(({
       elementRef.current.destroy();
     }
 
-    elementRef.current = factory.createAuthElement(type, {
+    factory.createAuthElement(type, {
       target: containerRef.current,
       styles,
       ...rest,
+    }).then(element => {
+      elementRef.current = element;
     });
 
     return () => {
