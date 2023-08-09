@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useReducer } from 'react';
+import { mockState, mergeDeep } from '@junipero/core';
 import PropTypes from 'prop-types';
-import { mockState, mergeDeep } from '@poool/junipero-utils';
 
 import { SubscribeContext as Ctx } from '../contexts';
 import { loadScript } from '../utils';

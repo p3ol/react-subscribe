@@ -5,8 +5,8 @@ import {
   useImperativeHandle,
   forwardRef,
 } from 'react';
+import { classNames } from '@junipero/core';
 import PropTypes from 'prop-types';
-import { classNames } from '@poool/junipero-utils';
 
 import { useSubscribe } from '../hooks';
 import { generateId } from '../utils';
