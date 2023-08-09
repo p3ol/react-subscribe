@@ -4,14 +4,15 @@ import { createBrowser } from '../tests/utils';
 
 describe('E2E > Subscribe', () => {
   jest.setTimeout(30000);
-  let browser;
+  let server, browser;
 
   beforeAll(async () => {
     process.env.TEST_PORT = 63003;
-    await devServer.setup({
-      command: 'yarn serve',
+    server = await devServer.setup({
+      command: 'npm run serve',
+      host: 'localhost',
       port: 63003,
-      launchTimeout: 30000,
+      launchTimeout: 10000,
     });
 
     browser = await createBrowser();
@@ -40,7 +41,7 @@ describe('E2E > Subscribe', () => {
   });
 
   afterAll(async () => {
-    await devServer.teardown();
+    await devServer.teardown(server);
     await browser.close();
   });
 });
