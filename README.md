@@ -59,6 +59,8 @@ export default = () => {
 
 - `styles` {`Object`} (optional) Custom styles for the element. Use `{ custom_css: '' }` to add custom CSS.
 - `offer` {`String`} (optional) Offer ID used to display a `Starting at X` text.
+- `interval` {`Number`} (optional) Offer subscription renewal interval (in months, defaults to 1).
+- `currency` {`String`} (optional) Offer currency (defaults to country's own currency deduced from the request IP).
 
 ### useSubscribe()
 

@@ -10,6 +10,8 @@ const SigninWithSubscribeButton = forwardRef((props, ref) => (
 SigninWithSubscribeButton.displayName = 'SigninWithSubscribeButton';
 SigninWithSubscribeButton.propTypes = {
   offer: PropTypes.string,
+  interval: PropTypes.string,
+  currency: PropTypes.string,
 };
 
 export default SigninWithSubscribeButton;
