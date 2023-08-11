@@ -49,7 +49,7 @@
     "puppeteer": "21.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-router-dom": "6.14.2",
+    "react-router-dom": "6.15.0",
     "rollup": "3.28.0",
     "standard-version": "9.5.0",
     "webpack": "5.88.2",
