@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: 20
           check-latest: true
@@ -36,7 +36,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
           check-latest: true
@@ -58,7 +58,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: 20
           check-latest: true
