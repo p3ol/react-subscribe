@@ -17,7 +17,7 @@
     "npm": ">=8"
   },
   "dependencies": {
-    "@babel/runtime-corejs3": "7.22.15",
+    "@babel/runtime-corejs3": "7.26.10",
     "@junipero/core": "3.2.3",
     "core-js": "3.32.2",
     "prop-types": "15.8.1"
